@@ -1,13 +1,9 @@
 import pandas as pd
 import urllib.parse
 import webbrowser
-import streamlit as st
-
-st.title("phData Hiearchical Data Viewer")
 
 # Load csv into data frame
 df = pd.read_csv("data/employees.csv", header=0).convert_dtypes()
-st.dataframe(df)
 
 
 edges = ""
@@ -19,9 +15,8 @@ for _, row in df.iterrows():
         edges += f'\t"{row.iloc[0]}" -> "{row.iloc[1]}";\n'
 
 d = f'digraph {{\n{edges}}}'
-st.graphviz_chart(d)
+url = f'http://magjac.com/graphviz-visual-editor/?dot={urllib.parse.quote(d)}'
 
+webbrowser.open(url)
 
-# url = f'http://magjac.com/graphviz-visual-editor/?dot={urllib.parse.quote(d)}'
-# webbrowser.open(url)
-# print(d)
+print(d)
