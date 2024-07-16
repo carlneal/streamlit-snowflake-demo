@@ -27,70 +27,52 @@ let tree = d3.tree;
 let hierarchy = d3.hierarchy;
 let select = d3.select;
 let data = {
-    "name": "(company)",
+    "name": "Steven King",
     "children": [
         {
-            "name": "SALES",
+            "name": "Neena Kochhar",
             "children": [
                 {
                     "name": "Hermann Baer"
-                }
-            ]
-        },
-        {
-            "name": "FINANCE",
-            "children": [
+                },
                 {
                     "name": "Shelley Higgins"
                 },
                 {
-                    "name": "Nancy Greenberg"
-                },
-                {
-                    "name": "Ismael Sciarra"
-                },
-                {
-                    "name": "Luis Popp"
-                },
-                {
-                    "name": "Jose Manuel Urman"
+                    "name": "Nancy Greenberg",
+                    "children": [
+                        {
+                            "name": "Ismael Sciarra"
+                        },
+                        {
+                            "name": "Jose Manuel Urman"
+                        },
+                        {
+                            "name": "Luis Popp"
+                        }
+                    ]
                 }
             ]
         },
         {
-            "name": "PRESIDENCE",
+            "name": "Lex De Haan",
             "children": [
                 {
-                    "name": "Steven King"
-                },
-                {
-                    "name": "Neena Kochhar"
-                },
-                {
-                    "name": "Lex De Haan"
+                    "name": "Alexander Hunold",
+                    "children": [
+                        {
+                            "name": "Bruce Ernst"
+                        },
+                        {
+                            "name": "Valli Pataballa"
+                        }
+                    ]
                 }
             ]
         },
         {
-            "name": "IT",
+            "name": "Den Raphaely",
             "children": [
-                {
-                    "name": "Alexander Hunold"
-                },
-                {
-                    "name": "Valli Pataballa"
-                },
-                {
-                    "name": "Bruce Ernst"
-                }
-            ]
-        },
-        {
-            "name": "ANALYTICS",
-            "children": [
-                {
-                    "name": "Den Raphaely"
-                },
                 {
                     "name": "Alexander Khoo"
                 },
@@ -100,11 +82,8 @@ let data = {
             ]
         },
         {
-            "name": "DOCUMENTATION",
+            "name": "Adam Fripp",
             "children": [
-                {
-                    "name": "Adam Fripp"
-                },
                 {
                     "name": "Laura Bissot"
                 }
